@@ -62,78 +62,97 @@ img {
     text-transform: uppercase;
     color: #4d5ae5;
     text-decoration: none;
+    display: inline-block;
 }
+    .logo-link .logo-span {
+        color: #2e2f42;
+    }
 .container {
-    max-width: 1128px;
-    padding-left: 0;
-    padding-right: 0;
+    max-width: 1158px;
+    padding: 0 15px;
     margin: 0 auto;
 }
 section {
     padding: 120px 0;
 }
-.logo-link .logo-span {
-    color: #2e2f42;
-}
 .list-style-none {
     list-style: none;
 }
-.display-none {
-    display: none;
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden; 
 }
-/*header*/
-.head .navbar-cont{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.head .navbar{
-    display: flex;
-    align-items: center;
-    padding: 24px 0;
-}
-    .head .navbar .logo-link{
-        margin-right: 76px;
-    }
-    .head .navbar .navbar-menu-li:not(:last-child){
-        margin-right: 40px;
-    }
-    .head .navbar .navbar-a{
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.02em;
-        color: #2e2f42;
-        text-decoration: none;
-    }
-    .head .navbar .navbar-a:hover{
-        color: #404bbf;
-    }
-    .head .navbar .navbar-a:focus{
-        color: #404bbf;
-    }
-    .head .contact-info{
-        font-style: normal;
-        padding: 24px 0;
-    }
-        .head .contact-info .address-list-li:not(:last-child){
-            margin-right: 40px;
-        }
-        .head .contact-info .address-a{
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 1.5;
-            letter-spacing: 0.02em;
-            color: #434455;
-            text-decoration: none;
-        }
-        .head .contact-info .address-a:hover{
-            color: #404bbf;
-        }
-        .head .contact-info .address-a:focus{
-            color: #404bbf;
-        }
 
+/*header*/
+.head{
+    border-bottom: 1px solid #e7e9fc;
+}
+    .head .navbar-cont{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .head .navbar{
+        display: flex;
+        align-items: center;
+    }
+        .head .navbar .logo-link{
+            margin-right: 76px;
+        }
+            .head .navbar .navbar-menu-list{
+                display: flex;
+            }
+                .head .navbar .navbar-menu-li{
+                    padding: 24px 0;
+                }
+                .head .navbar .navbar-menu-li:not(:last-child){
+                    margin-right: 40px;
+                }
+                .head .navbar .navbar-a{
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 1.5;
+                    letter-spacing: 0.02em;
+                    color: #2e2f42;
+                    text-decoration: none;
+                }
+                .head .navbar .navbar-a:hover{
+                    color: #404bbf;
+                }
+                .head .navbar .navbar-a:focus{
+                    color: #404bbf;
+                }
+                .head .contact-info{
+                    font-style: normal;
+                }
+                    .head .contact-info .address-list{
+                        display: flex;
+                    }
+                        .head .contact-info .address-list-li:not(:last-child){
+                            margin-right: 40px;
+                        }
+                        .head .contact-info .address-a{
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 1.5;
+                            letter-spacing: 0.02em;
+                            color: #434455;
+                            text-decoration: none;
+                        }
+                        .head .contact-info .address-a:hover{
+                            color: #404bbf;
+                        }
+                        .head .contact-info .address-a:focus{
+                            color: #404bbf;
+                        }
 
 /*main*/
 /*hero section*/
@@ -150,6 +169,7 @@ section {
             line-height: 1.07;
             text-align: center;
             color: #ffffff;
+            max-width: 496px;
         }
         .hero-section .hero-button{
             background: #4d5ae5;
@@ -160,6 +180,7 @@ section {
             padding: 16px 32px;
             margin-top: 48px;
             box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+            min-width: 169px;
         }
         .hero-section .hero-button:hover{
             background: #404bbf;
@@ -180,8 +201,8 @@ section {
         .services-section .services-list .service-card{
             width: calc((100% - 72px) / 4)
         }
-            .services-section .service-card .services-card-p{
-                margin-top: 8px;
+            .services-section .service-card .card-text{
+                margin-bottom: 8px;
             }
 
 /*team-section*/
@@ -195,14 +216,16 @@ section {
     }
         .team-section .team-member-card{
             background-color: #ffffff;
-            width: calc((100% - 72px) / 4)
+            width: calc((100% - 72px) / 4);
+            border-radius: 0px 0px 4px 4px;
+            box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
         }
             .team-section .team-member-card .card-text-cont{
                 padding: 32px 0;
                 text-align: center;
             }
-                .team-section .team-member-card .card-text-cont .base-text{
-                    margin-top: 8px
+                .team-section .team-member-card .card-text-cont .card-text{
+                    margin-bottom: 8px
                 }
 
 /*portfolio-section*/
@@ -213,6 +236,7 @@ section {
         display: flex;
         flex-wrap: wrap;
         gap: 24px;
+        row-gap: 48px;
     }
         .portfolio-section .portfolio-card{
             width: calc((100% - 48px) / 3);
@@ -224,8 +248,8 @@ section {
             border-bottom: 1px solid rgba(231, 233, 252, 1);
             padding: 32px 16px;
         }
-            .portfolio-section .portfolio-card .card-text-cont .base-text{
-                margin-top: 8px;
+            .portfolio-section .portfolio-card .card-text-cont .card-text{
+                margin-bottom: 8px;
             }
 
 /*footer*/
@@ -235,6 +259,7 @@ section {
 }
     .footer .logo-link{
         color: #4d5ae5;
+        margin-bottom: 16px;
     }
     .footer .logo-link .logo-span{
         color: #f4f4fd;
@@ -242,5 +267,4 @@ section {
     .footer .footer-p{
         color: #f4f4fd;
         max-width: 264px;
-        margin-top: 16px;
     }
