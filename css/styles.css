@@ -110,9 +110,6 @@ section {
             .head .navbar .navbar-menu-list{
                 display: flex;
             }
-                .head .navbar .navbar-menu-li{
-                    padding: 24px 0;
-                }
                 .head .navbar .navbar-menu-li:not(:last-child){
                     margin-right: 40px;
                 }
@@ -123,6 +120,7 @@ section {
                     letter-spacing: 0.02em;
                     color: #2e2f42;
                     text-decoration: none;
+                    padding: 24px 0;
                 }
                 .head .navbar .navbar-a:hover{
                     color: #404bbf;
