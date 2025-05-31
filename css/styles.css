@@ -121,6 +121,7 @@ section {
                     color: #2e2f42;
                     text-decoration: none;
                     padding: 24px 0;
+                    display: inline-block;
                 }
                 .head .navbar .navbar-a:hover{
                     color: #404bbf;
